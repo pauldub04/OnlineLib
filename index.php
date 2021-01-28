@@ -49,8 +49,10 @@
                                 echo '<td>'.$row["title"].'</td>';
                                 echo '<td>'.$row["author"].'</td>';
                                 echo '
-                                    <td>
-                                        <button type="button" class="btn btn-outline-primary">
+                                    <form name="change_availability" action="change_availability.php" method="POST">
+                                        <td>
+                                            <input type="text" name="availability" value='.$row["availability"].' hidden>
+                                            <button type="submit" name="id" value='.$row["id"].' class="btn btn-outline-primary">
                                 ';
 
                                 if ($row["availability"] == 1)
@@ -59,8 +61,9 @@
                                     echo "Нет в наличии";
                                             
                                 echo '
-                                        </button>
-                                    </td>
+                                            </button>
+                                        </td>
+                                    </form>
                                 ';
                                 echo '
                                     <form name="delete" action="delete.php" method="POST">
