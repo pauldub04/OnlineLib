@@ -11,10 +11,6 @@
         die("Connection failed: " . $conn->connect_error);
     } 
 
-    
-
-    echo 'Успешно соединились';
-    // $conn->close();
 ?>
 
 
@@ -86,8 +82,7 @@
 
                     ?>
 
-
-                    <tr>
+                    <!-- <tr>
                         <th scope="row">Добавить</th>
                         <td><input type="text" class="form-control"></td>
                         <td><input type="text" class="form-control"></td>
@@ -97,7 +92,18 @@
                                 Добавить
                             </button>
                         </td>
+                    </tr> -->
+
+                    <tr>
+                        <form action="add.html">
+                            <td>
+                                <button type="submit" class="btn btn-outline-success">
+                                    Добавить книгу
+                                </button>
+                            </td>
+                        </form>
                     </tr>
+
                 </tbody>
             </table>
         </div>

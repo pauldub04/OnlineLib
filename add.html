@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Библиотека</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div id="app">
+    <div class="container mt-5 ">
+        <h1>Добавить новую книгу</h1>
+
+        <form name="add" action="add.php" method="POST">
+            <div class="col-md-4 mt-5">
+                <label for="validationCustom01" class="form-label">Название</label>
+                <input type="text" class="form-control" id="validationCustom01" name="title" required>
+            </div>
+            <div class="col-md-4 mt-2">
+                <label for="validationCustom02" class="form-label">Автор</label>
+                <input type="text" class="form-control" id="validationCustom02" name="author" required>
+            </div>
+
+            <div class="col-md-4 mt-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="true" id="invalidCheck" name="availability">
+                  <label class="form-check-label" for="invalidCheck">
+                    В наличии
+                  </label>
+                </div>
+              </div>
+
+            <div class="col-12 mt-5">
+                <button class="btn btn-success" name="add" type="submit">Добавить</button>
+            </div>
+
+    </form>
+
+    </div>
+</div>
+
+</body>
+</html>

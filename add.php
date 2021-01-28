@@ -1,4 +1,5 @@
 <?php
+
     $servername = "localhost";
     $username = "pd";
     $password = "1234";
@@ -10,12 +11,18 @@
         die("Connection failed: " . $conn->connect_error);
     } 
 
-    $sql = "DELETE FROM books WHERE id=".$_POST['id'];
+    if ($_POST['availability'] == 'true')
+        $availability = 1;
+    else
+        $availability = 0;
+
+    $sql = "INSERT INTO books (title, author, availability)
+    VALUES ('".$_POST['title']."', '".$_POST['author']."', ".$availability.")";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record deleted successfully";
+        echo "New record created successfully";
     } else {
-        echo "Error deleting record: " . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
