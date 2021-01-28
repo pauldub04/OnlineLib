@@ -69,7 +69,7 @@
                                 echo '
                                     <form name="delete" action="delete.php" method="POST">
                                         <td>
-                                            <button type="submit"  class="btn btn-outline-danger">
+                                            <button type="submit" name="id" value='.$row["id"].' class="btn btn-outline-danger">
                                                 Удалить
                                             </button>
                                         </td>
